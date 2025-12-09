@@ -8,17 +8,27 @@
 // Memulai session
 session_start();
 
-// Cek apakah user sudah login
+// TEMPORARY: Disable login check for testing
+// Set dummy session untuk testing
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../auth/login.php");
-    exit();
+    $_SESSION['user_id'] = 1;
+    $_SESSION['username'] = 'test_user';
+    $_SESSION['nama'] = 'Test User';
+    $_SESSION['email'] = 'testuser@example.com';
+    $_SESSION['role'] = 'user';
 }
 
+// Cek apakah user sudah login
+// if (!isset($_SESSION['user_id'])) {
+//     header("Location: ../auth/login.php");
+//     exit();
+// }
+
 // Cek apakah user adalah user biasa (bukan admin)
-if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-    header("Location: ../admin/dashboard.php");
-    exit();
-}
+// if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+//     header("Location: ../admin/dashboard.php");
+//     exit();
+// }
 
 // Cek apakah request method adalah POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
