@@ -192,29 +192,3 @@ Jika menggunakan XAMPP:
     password: user123
 
 *(Sesuaikan dengan data pada `database.sql`.)*
-
-------------------------------------------------------------------------
-
-## 🤝 Kontribusi (Workflow Git)
-
-SILATIUM menggunakan **Git Flow**:
-
-1.  Tidak boleh push langsung ke `main`
-2.  Buat branch fitur:
-
-```{=html}
-<!-- -->
-```
-    feature/nama-fitur
-
-3.  Commit bertahap\
-4.  Push\
-5.  Buat Pull Request ke `develop`\
-6.  Ketua merge setelah review
-
-------------------------------------------------------------------------
-
-## ❤️ Terima Kasih
-
-SILATIUM dikembangkan oleh Kelompok 06 dengan semangat kolaborasi dan
-pembelajaran.
